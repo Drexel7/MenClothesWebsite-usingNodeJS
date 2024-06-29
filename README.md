@@ -1,6 +1,6 @@
 # MenClothesWebsite-usingNodeJS
 
-This project is a men's clothing website developed using Node.js, HTML, and CSS. The website features a questionnaire for users, an authentication system, and a shopping cart functionality.
+This project is a men's clothing website developed using Node.js, HTML, and CSS. The website features a questionnaire for users, an authentication system, and a shopping cart functionality. This project was made during the second half of the Web Programming course.
 
 # Website Overview
 
