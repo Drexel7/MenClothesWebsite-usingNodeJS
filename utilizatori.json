@@ -1,0 +1,18 @@
+[
+    { 
+        "utilizator": "test", 
+        "parola": "test", 
+        "rol": "USER"
+    },
+
+    { 
+        "utilizator": "admin", 
+        "parola": "admin", 
+        "rol": "ADMIN"
+    },
+    { 
+        "utilizator": "robert", 
+        "parola": "robert", 
+        "rol": "ADMIN"
+    }
+]

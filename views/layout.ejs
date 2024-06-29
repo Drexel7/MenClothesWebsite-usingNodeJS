@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Îmbrăcăminte</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/js/script.js"></script>
+    <link rel="icon" href="/public/resources/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Îmbrăcăminte Bărbați</h1>
+    </header>
+    <nav>
+        <div class="nav-left">
+  
+            <a href="/">Acasă</a>
+            <a href="/chestionar">Chestionar</a>
+            <a href="/vizualizare-cos">Coș de cumpărături</a>
+        </div>
+        <div class="nav-right">
+            <% if(userlogged != "") { %>
+              <% if(userlogged['rol'] == "ADMIN") { %>
+                <button onclick="window.location.href = '/admin'"> <%= userlogged['utilizator'] %>(ADMIN)</button>
+              <% } else {%>
+              <button onclick="window.location.href = '/'"> <%= userlogged['utilizator'] %>(USER)</button>
+            <% } %>
+              
+            <button id="loginBtn" onclick="window.location.href = '/autentificare'"> Logout </button>
+            <%} else { %>
+              <button id="loginBtn" onclick="window.location.href = '/autentificare'"> Login </button>
+            <% } %>
+          </div>
+        </nav>
+    </nav>
+
+    <main id="continut">
+        <%- body -%>
+
+    </main>
+    <br/><br/><br/>
+    <footer>
+        <span>&copy; Îmbrăcăminte 2024</span>
+    </footer>
+</body>
+</html>

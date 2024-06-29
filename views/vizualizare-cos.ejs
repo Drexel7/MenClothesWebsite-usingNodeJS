@@ -1,0 +1,28 @@
+<section>
+    <h1> Coș de cumpărături </h1>
+
+    <% if(produse_cumparate.length == 0) { %>
+    <p>Nu exista niciun articol în coșul tău de cumpărături.</p>
+        <% if(userlogged == "") { %>
+        <p><b>Note:</b> Pentru a adaugă articole în lista de cumpărături, trebuie să fiți logat.</p>
+        <% } %>
+    <% } else { %>
+    <table>
+        <tr>
+            <th>Nume</th>
+            <th>Preț</th>
+            <th>Cantitate</th>
+        </tr>
+
+        <% produse_cumparate.forEach((articol) => { %>
+        <tr>
+            <td><%= articol.produs.nume_produs%></td>
+            <td><%= articol.produs.pret%> lei</td>
+            <td><%= articol.nr_produse %></td>
+        </tr>
+        <% }); %>
+
+    </table>
+    <% } %>
+
+</section>

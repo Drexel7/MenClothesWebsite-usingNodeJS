@@ -1,0 +1,29 @@
+{
+    "intrebari":[
+        {
+            "intrebare": "Care dintre următoarele piese de îmbrăcăminte este destinată să fie purtată pe partea superioară a corpului?",
+            "variante": ["Pantaloni", "Pulover", "Șosete", "Pantaloni scurți"],
+            "corect": 1
+        },
+        {
+            "intrebare": "Ce reprezintă abrevierea 'T-shirt'?",
+            "variante": ["Tricotaj", "Tricou", "Pantaloni", "Sacou"],
+            "corect": 1
+        },
+        {
+            "intrebare": "Ce piesă de îmbrăcăminte acoperă partea inferioară a corpului?",
+            "variante": ["Cămașă", "Pulover", "Pantaloni", "Cravată"],
+            "corect": 2
+        },
+        {
+            "intrebare": "Ce reprezintă abrevierea 'Jacket'?",
+            "variante": ["Bluză", "Ghete", "Pantaloni", "Geacă"],
+            "corect": 3
+        },
+        {
+            "intrebare": "Ce tip de îmbrăcăminte se poartă pe cap?",
+            "variante": ["Căciulă", "Cizme", "Fular", "Pantofi"],
+            "corect": 0
+        }
+    ]
+}

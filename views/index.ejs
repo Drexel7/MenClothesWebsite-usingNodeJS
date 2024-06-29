@@ -1,0 +1,58 @@
+<section>
+    <h1> M&G </h1>
+
+    <%
+    var button_enabled = "";
+    if( userlogged == "" ){ %>
+        <a href="/autentificare" class="login-link">Logheaza-te pentru a accesa gama de articole</a><br />
+    <%
+        button_enabled = "disabled";
+    } else{ %>
+        <h2 class="welcome-message"> Bine ai revenit, <%= userlogged['utilizator'] %>! </h2>
+    <% } %>
+
+</section>
+
+<section>
+    <h1>Lista articole existente</h1>
+    <table>
+        <tr>
+            <th>Nume articol</th>
+            <th>Pret articol</th>
+            <th></th>
+        </tr>
+
+        <% listaProduse.forEach((produs) => { %> 
+        <tr>
+            <td> <span class="clickable" onclick="displayModalById('modal-<%= produs.id_produs %>')"><%=produs.nume_produs%></span> </td>
+            <td> <%=produs.pret%> lei </td>
+            <td class="centered-text"> 
+                <form method="POST" action="/adaugare-cos">
+                    <input type="hidden" name="id_produs" value="<%= produs.id_produs %>">
+                    <button  <%= button_enabled %>>Adaugă în coș</button>
+                </form>
+            </td>
+        </tr>
+        <% }); %>
+
+    </table>
+</section>
+
+<% listaProduse.forEach((produs) => { %> 
+<!-- The Modal -->
+<div id="modal-<%=produs.id_produs%>" class="modal">
+    <!-- Modal content -->
+    <div class="modal-container">
+        <span class="close">&times;</span>
+        <p><%= produs.nume_produs %></p>
+        <div class="modal-img">
+            <img src="/resources/articole/<%= produs.img_src %>" alt="<%= produs.nume_produs %>">
+        </div>
+        <p>Preț: <i><%= produs.pret %> lei</i></p>
+        <form method="POST" action="/adaugare-cos">
+            <input type="hidden" name="id_produs" value="<%= produs.id_produs %>">
+            <button  <%= button_enabled %>>Adaugă în coș</button>
+        </form>
+    </div>
+</div>
+<% }); %>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title></title>    
+   </head>
+<body class="chestionar">
+        <h2 id="title" style="text-align: center;">Chestionar despre Imbracaminte</h2>
+
+
+        <main>
+            <% if(intrebari.length!=0) { %>
+                <fieldset>
+                    <form id="culoare" action="/rezultat-chestionar" method="post">
+                        <% for (let i=0; i<intrebari.length;  i++ ) { %>
+                            <%=intrebari[i].intrebare %>
+                            <br/>
+                            <ol>
+                            <% for (var j =0; j <intrebari[i].variante.length;  j++ ) { %>
+                                <li>
+                            <input type="radio" id="id<%=i%>" name="raspuns-<%= i %>" value="<%= j %>"/>
+                            <%=intrebari[i].variante[j] %>
+                        
+                                </li>
+                            <% } %> 
+                            
+                        </ol>
+                        <% } %>
+                        <button>Valideaza</button>
+    
+                    </form>
+                </fieldset>
+            <% } %>
+        </main>
+</body>
+</html>

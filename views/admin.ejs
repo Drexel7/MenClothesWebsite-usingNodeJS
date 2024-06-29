@@ -1,0 +1,30 @@
+<section>
+    <div class="login-container">
+        <h1> Adaugă îmbrăcăminte </h1>
+
+        <form method="POST" action="/verificare-adaugare-produs">
+            <input type="hidden" name="img_src" value="background.jpg" />
+
+            <label for="nume_produs">Articol:</label><br>
+            <input type="text" id="nume_produs" name="nume_produs"><br><br>
+
+            <label for="pret">Preț</label><br>
+            <input type="number" min="0" id="pret" name="pret"><br><br>
+
+            <input type="submit" value="Adaugă articol">
+        </form>
+
+    </div>
+</section>
+<section>
+    <h1>Proprietăți Bază de date</h1>
+    <p> 
+        Crează baze de date nouă <br/>
+        <button id="create-db-btn" onclick="window.location.href='/creare-db'"> Creare DB </button>
+    </p>
+    <p> 
+        Adaugă înregistrări inițiale <br/>
+        <button id="load-db-btn" onclick="window.location.href='/inserare-db'"> Încarcare DB </button>
+    </p>
+    
+</section>
